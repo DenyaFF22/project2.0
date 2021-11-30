@@ -5,20 +5,21 @@ namespace project
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите первоt число для сложения");
-            string s = Console.ReadLine( );
-            int a = Convert.ToInt32(s); 
-            
+            Console.WriteLine("Введите первое число для сложения");
+            var s = Console.ReadLine();
+            int.TryParse(s, out var a);
+
             Console.WriteLine("Введите второе число сложения");
-            string s2 = Console.ReadLine();
-            int b = Convert.ToInt32(s2); 
+            s = Console.ReadLine();
+            int b = Convert.ToInt32(s);
 
             int c = a + b;
             Console.WriteLine("Сумма данных чисел:");
             Console.WriteLine(c);
             Console.ReadLine();
-            
-        
+
+
+
         }
     }
 }
